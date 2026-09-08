@@ -1,2 +1,0 @@
-# Pertama
-Free Trialz
