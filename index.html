@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tryout PPIH 2027</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HALAMAN DEPAN
+  ========================== -->
+  <div id="homePage" class="home-page">
+
+    <header class="home-header">
+      <div class="logo">
+        TRYOUT<span>PPIH</span>
+      </div>
+
+      <div class="header-badge">
+        CAT PPIH 2027
+      </div>
+    </header>
+
+
+    <main class="hero">
+
+      <div class="hero-content">
+
+        <div class="hero-label">
+          🎯 PERSIAPAN SELEKSI PPIH
+        </div>
+
+        <h1>
+          Siap Hadapi<br>
+          <span>CAT PPIH 2027?</span>
+        </h1>
+
+        <p class="hero-description">
+          Latihan soal CAT PPIH dengan sistem tryout online
+          untuk membantu kamu mempersiapkan diri menghadapi
+          seleksi petugas haji.
+        </p>
+
+        <button class="start-button" onclick="startTryout()">
+          Mulai Tryout
+          <span>→</span>
+        </button>
+
+        <div class="trust-text">
+          ✓ Latihan mandiri &nbsp;&nbsp;
+          ✓ Hasil otomatis &nbsp;&nbsp;
+          ✓ Pembahasan soal
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <div class="mini-card-header">
+          <span>TRYOUT PPIH</span>
+          <span class="live-dot">●</span>
+        </div>
+
+        <div class="mini-score">
+          <div class="score-circle">
+            <strong>100</strong>
+            <small>SOAL</small>
+          </div>
+        </div>
+
+        <div class="mini-info">
+
+          <div>
+            <strong>90</strong>
+            <span>Menit</span>
+          </div>
+
+          <div>
+            <strong>CAT</strong>
+            <span>Online</span>
+          </div>
+
+          <div>
+            <strong>Auto</strong>
+            <span>Scoring</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+
+    <!-- FITUR -->
+    <section class="features">
+
+      <h2>Kenapa latihan di sini?</h2>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>Soal Terstruktur</h3>
+          <p>
+            Latihan soal disusun berdasarkan materi
+            yang relevan dengan seleksi PPIH.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⏱️</div>
+          <h3>Simulasi CAT</h3>
+          <p>
+            Kerjakan soal dengan batas waktu seperti
+            simulasi ujian sebenarnya.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Hasil Otomatis</h3>
+          <p>
+            Setelah selesai, nilai dan hasil pengerjaan
+            dapat langsung dilihat.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+<!-- =========================
+     HARGA
+========================== -->
+
+<section class="pricing">
+
+  <div class="pricing-title">
+    <div class="hero-label">AKSES TRYOUT</div>
+
+    <h2>Siapkan Dirimu untuk Seleksi PPIH</h2>
+
+    <p>
+      Latihan dengan simulasi CAT agar lebih terbiasa
+      mengerjakan soal dalam batas waktu.
+    </p>
+  </div>
+
+
+  <div class="price-card">
+
+    <div class="price-badge">
+      TRYOUT PPIH 2027
+    </div>
+
+    <h3>Paket Tryout</h3>
+
+    <div class="price">
+      Rp49.000
+    </div>
+
+    <p class="price-description">
+      Akses latihan tryout dan pembahasan.
+    </p>
+
+    <div class="price-list">
+
+      <div>✓ Simulasi CAT</div>
+      <div>✓ 50 soal latihan</div>
+      <div>✓ Timer 90 menit</div>
+      <div>✓ Nilai otomatis</div>
+      <div>✓ Pembahasan soal</div>
+      <div>✓ Review jawaban</div>
+
+    </div>
+
+    <button
+      class="buy-button"
+      onclick="buyTryout()">
+      Beli Akses
+    </button>
+
+    <div class="secure-text">
+      🔒 Pembayaran aman
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================== -->
+
+<section class="faq">
+
+  <h2>Pertanyaan yang Sering Ditanyakan</h2>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <h3>Apakah ini soal resmi PPIH?</h3>
+      <p>
+        Tidak. Materi ini merupakan latihan dan simulasi
+        untuk membantu persiapan seleksi.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Berapa lama waktu pengerjaan?</h3>
+      <p>
+        Simulasi menggunakan timer 90 menit.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Apakah nilai langsung muncul?</h3>
+      <p>
+        Ya. Setelah tryout selesai, sistem akan menghitung
+        dan menampilkan hasil pengerjaan.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Apakah bisa mengerjakan dari HP?</h3>
+      <p>
+        Ya. Tampilan dirancang agar nyaman digunakan
+        melalui smartphone maupun komputer.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+    <footer class="home-footer">
+      © 2026 Tryout PPIH — Platform latihan CAT
+    </footer>
+
+  </div>
+
+
+
+  <!-- =========================
+       HALAMAN CAT
+  ========================== -->
+  <!-- =========================
+     HALAMAN PEMBELIAN
+========================== -->
+
+<div id="purchasePage" class="purchase-page">
+
+  <div class="purchase-card">
+
+    <div class="purchase-logo">
+      TRYOUT<span>PPIH</span>
+    </div>
+
+    <div class="purchase-badge">
+      AKSES TRYOUT
+    </div>
+
+    <h1>Tryout PPIH 2027</h1>
+
+    <p class="purchase-description">
+      Dapatkan akses untuk mengerjakan simulasi CAT
+      dan melihat hasil pengerjaan.
+    </p>
+
+
+    <div class="purchase-price">
+      Rp49.000
+    </div>
+
+
+    <div class="purchase-features">
+
+      <div>✓ 50 soal latihan</div>
+
+      <div>✓ Timer 90 menit</div>
+
+      <div>✓ Nilai otomatis</div>
+
+      <div>✓ Pembahasan soal</div>
+
+      <div>✓ Review jawaban</div>
+
+    </div>
+
+
+    <button
+      class="purchase-button"
+      onclick="simulatePurchase()">
+
+      Lanjutkan Pembelian
+
+    </button>
+
+
+    <button
+      class="purchase-back"
+      onclick="showDashboard()">
+
+      ← Kembali ke Dashboard
+
+    </button>
+
+  </div>
+
+</div>
+<!-- =========================
+     DASHBOARD PESERTA
+========================== -->
+<!-- =========================
+     LOGIN
+========================== -->
+
+<div id="loginPage" class="login-page">
+
+  <div class="login-card">
+
+    <div class="login-logo">
+      TRYOUT<span>PPIH</span>
+    </div>
+
+    <h1>Selamat Datang</h1>
+
+    <p class="login-description">
+      Masuk untuk mengakses tryout PPIH 2027.
+    </p>
+
+    <form onsubmit="loginUser(event)">
+
+      <label>Email</label>
+
+      <input
+        type="email"
+        id="loginEmail"
+        placeholder="Masukkan email"
+        required
+      >
+
+      <label>Password</label>
+
+      <input
+        type="password"
+        id="loginPassword"
+        placeholder="Masukkan password"
+        required
+      >
+
+      <button type="submit" class="login-button">
+        Masuk
+      </button>
+
+    </form>
+
+    <div class="login-divider">
+      atau
+    </div>
+
+    <button
+      class="register-button"
+      onclick="showRegister()">
+      Buat Akun Baru
+    </button>
+
+    <button
+      class="back-home-button"
+      onclick="backToHomeFromLogin()">
+      ← Kembali ke halaman depan
+    </button>
+
+  </div>
+
+</div>
+<!-- =========================
+     REGISTER
+========================== -->
+
+<div id="registerPage" class="register-page">
+
+  <div class="login-card">
+
+    <div class="login-logo">
+      TRYOUT<span>PPIH</span>
+    </div>
+
+    <h1>Buat Akun</h1>
+
+    <p class="login-description">
+      Daftar untuk mendapatkan akun peserta.
+    </p>
+
+    <form onsubmit="registerUser(event)">
+
+      <label>Nama</label>
+
+      <input
+        type="text"
+        id="registerName"
+        placeholder="Nama lengkap"
+        required
+      >
+
+      <label>Email</label>
+
+      <input
+        type="email"
+        id="registerEmail"
+        placeholder="Alamat email"
+        required
+      >
+
+      <label>Password</label>
+
+      <input
+        type="password"
+        id="registerPassword"
+        placeholder="Buat password"
+        minlength="6"
+        required
+      >
+
+      <button type="submit" class="login-button">
+        Daftar
+      </button>
+
+    </form>
+
+    <button
+      class="back-home-button"
+      onclick="showLogin()">
+      ← Kembali ke Login
+    </button>
+
+  </div>
+
+</div>
+<div id="dashboardPage" class="dashboard-page">
+
+  <header class="dashboard-header">
+
+    <div class="logo">
+      TRYOUT<span>PPIH</span>
+    </div>
+
+    <button class="logout-button" onclick="backToHome()">
+      Keluar
+    </button>
+
+  </header>
+
+
+  <main class="dashboard-container">
+
+    <div class="welcome-box">
+
+      <div>
+        <div class="small-label">
+          DASHBOARD PESERTA
+        </div>
+
+        <h1>Selamat Datang 👋</h1>
+
+        <p>
+          Siapkan dirimu dan mulai latihan CAT PPIH.
+        </p>
+      </div>
+
+    </div>
+
+
+    <!-- TRYOUT AKTIF -->
+
+    <section class="dashboard-section">
+
+      <h2>Tryout Tersedia</h2>
+
+      <div class="tryout-card">
+
+        <div class="tryout-top">
+
+          <div class="tryout-icon">
+            📝
+          </div>
+
+          <div>
+
+            <h3>
+              Tryout PPIH 2027
+            </h3>
+
+            <p>
+              Simulasi CAT Seleksi Petugas Haji
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="tryout-details">
+
+          <div>
+            <strong>50</strong>
+            <span>Soal</span>
+          </div>
+
+          <div>
+            <strong>90</strong>
+            <span>Menit</span>
+          </div>
+
+          <div>
+            <strong>CAT</strong>
+            <span>Online</span>
+          </div>
+
+        </div>
+
+
+        <div id="accessStatus" class="access-status">
+  <span class="status-dot"></span>
+  Akses tersedia
+</div>
+
+<button
+  id="dashboardActionButton"
+  class="dashboard-start"
+  onclick="handleTryoutAccess()">
+
+  Mulai Tryout →
+
+</button>
+
+      </div>
+
+    </section>
+
+
+    <!-- RIWAYAT -->
+
+    <section class="dashboard-section">
+
+      <h2>Riwayat Pengerjaan</h2>
+
+      <div class="history-empty">
+
+        <div class="history-icon">
+          📊
+        </div>
+
+        <h3>Belum ada riwayat</h3>
+
+        <p>
+          Hasil tryout yang sudah kamu kerjakan
+          akan muncul di sini.
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+</div>
+  <div id="catPage" class="cat-page">
+
+    <header class="header">
+
+      <div class="title">
+        TRYOUT PPIH 2027
+      </div>
+
+      <div class="subtitle">
+        Simulasi CAT Seleksi Petugas Haji
+      </div>
+
+      <div class="timer" id="timer">
+        90:00
+      </div>
+
+    </header>
+
+
+    <div class="container">
+
+      <div class="question-info">
+
+        <span class="category" id="category">
+          Manasik Haji
+        </span>
+
+        <span id="questionNumber">
+          Soal 1
+        </span>
+
+      </div>
+
+
+      <div class="card">
+
+        <h2 id="question">
+          Pertanyaan
+        </h2>
+
+        <div id="options"></div>
+
+      </div>
+
+
+      <div class="actions">
+
+        <button
+          class="previous"
+          onclick="previousQuestion()">
+          ← Sebelumnya
+        </button>
+
+        <button
+          class="doubt"
+          onclick="toggleDoubt()">
+          Ragu-ragu
+        </button>
+
+        <button
+          class="next"
+          onclick="nextQuestion()">
+          Berikutnya →
+        </button>
+
+      </div>
+
+
+      <div class="navigation">
+
+        <h3>Nomor Soal</h3>
+
+        <div id="navigationButtons"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

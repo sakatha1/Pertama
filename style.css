@@ -1,0 +1,1903 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: #f4f7f9;
+    color: #202124;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+
+    background: #4b92dc;
+
+    color: white;
+
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.title {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+.subtitle {
+    margin-top: 4px;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   TIMER
+===================================================== */
+
+.timer {
+    flex-shrink: 0;
+
+    min-width: 118px;
+
+    padding: 9px 12px;
+
+    background: #ffffff;
+
+    color: #168b65;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.timer small {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 10px;
+
+    color: #168b65;
+}
+
+
+.timer strong {
+    display: block;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 18px 14px 30px;
+}
+
+
+/* =====================================================
+   NOMOR SOAL / KATEGORI
+===================================================== */
+
+.question-info {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+
+.category {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 8px 12px;
+
+    background: #e2f7ee;
+
+    color: #168b65;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+#questionNumber {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #292929;
+
+    text-align: right;
+}
+
+
+/* =====================================================
+   KARTU SOAL
+===================================================== */
+
+.card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   PERTANYAAN
+===================================================== */
+
+.card h2 {
+    margin: 0 0 18px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+
+    color: #202124;
+}
+
+
+/* =====================================================
+   PILIHAN JAWABAN
+===================================================== */
+
+.option {
+    width: 100%;
+
+    min-height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    padding: 12px 14px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #202124;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.1s ease;
+}
+
+
+.option:active {
+    transform: scale(0.99);
+}
+
+
+.option:hover {
+    background: #f8fbfd;
+}
+
+
+/* Huruf A B C D */
+
+.option-letter {
+    flex: 0 0 31px;
+
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid #b8b8b8;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* Jawaban terpilih */
+
+.option.selected {
+    background: #e4f7ef;
+
+    border-color: #15966b;
+
+    color: #202124;
+}
+
+
+.option.selected .option-letter {
+    background: #15966b;
+
+    border-color: #15966b;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   BUTTON AKSI
+===================================================== */
+
+.actions {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 14px;
+}
+
+
+.actions button {
+    min-height: 43px;
+
+    padding: 9px 7px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.1s ease,
+        opacity 0.1s ease;
+}
+
+
+.actions button:active {
+    transform: scale(0.97);
+}
+
+
+/* Sebelumnya */
+
+.previous {
+    background: #ffffff;
+
+    color: #777777;
+
+    border: 1px solid #dedede;
+}
+
+
+/* Ragu-ragu */
+
+.doubt {
+    background: #fff8d8;
+
+    color: #a47700;
+
+    border: 1px solid #f0d56d;
+}
+
+
+/* Selanjutnya */
+
+.next {
+    background: #15966b;
+
+    color: #ffffff;
+
+    border: 1px solid #15966b;
+
+    box-shadow:
+        0 2px 5px rgba(21, 150, 107, 0.15);
+}
+
+
+/* =====================================================
+   NAVIGASI SOAL
+===================================================== */
+
+.navigation {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 17px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.navigation h3 {
+    margin: 0 0 13px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #252525;
+}
+
+
+/* 5 kolom */
+
+#navigationButtons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 7px;
+}
+
+
+/* Nomor */
+
+.nav-button {
+    width: 100%;
+
+    min-height: 38px;
+
+    padding: 7px 4px;
+
+    background: #ffffff;
+
+    border: 1px solid #dedede;
+
+    border-radius: 8px;
+
+    color: #555555;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* Soal yang sedang dibuka */
+
+.nav-button.active {
+    background: #effaf6;
+
+    border: 2px solid #15966b;
+
+    color: #15966b;
+
+    font-weight: 800;
+}
+
+
+/* Soal sudah dijawab */
+
+.nav-button.answered {
+    background: #dff4eb;
+
+    border-color: #b9e4d2;
+
+    color: #168b65;
+}
+
+
+/* Soal ragu-ragu */
+
+.nav-button.doubtful {
+    background: #fff2bd;
+
+    border-color: #efd36a;
+
+    color: #987000;
+}
+
+
+/* Jika aktif + sudah dijawab */
+
+.nav-button.active.answered {
+    background: #e4f7ef;
+
+    border: 2px solid #15966b;
+
+    color: #15966b;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 13px 12px;
+
+        gap: 10px;
+    }
+
+
+    .title {
+        font-size: 15px;
+    }
+
+
+    .subtitle {
+        font-size: 10px;
+    }
+
+
+    .timer {
+        min-width: 105px;
+
+        padding: 7px 9px;
+
+        border-radius: 10px;
+    }
+
+
+    .timer small {
+        font-size: 9px;
+    }
+
+
+    .timer strong {
+        font-size: 14px;
+    }
+
+
+    .container {
+        padding: 14px 10px 25px;
+    }
+
+
+    .question-info {
+        margin-bottom: 10px;
+    }
+
+
+    .category {
+        padding: 7px 10px;
+
+        font-size: 11px;
+    }
+
+
+    #questionNumber {
+        font-size: 11px;
+    }
+
+
+    .card {
+        padding: 16px;
+
+        border-radius: 14px;
+    }
+
+
+    .card h2 {
+        font-size: 16px;
+
+        line-height: 1.55;
+
+        margin-bottom: 15px;
+    }
+
+
+    .option {
+        min-height: 52px;
+
+        padding: 10px 11px;
+
+        gap: 10px;
+
+        font-size: 13px;
+    }
+
+
+    .option-letter {
+        flex-basis: 29px;
+
+        width: 29px;
+        height: 29px;
+
+        font-size: 13px;
+    }
+
+
+    .actions {
+        gap: 6px;
+
+        margin-top: 12px;
+    }
+
+
+    .actions button {
+        min-height: 40px;
+
+        padding: 8px 4px;
+
+        font-size: 10px;
+    }
+
+
+    .navigation {
+        margin-top: 15px;
+
+        padding: 14px;
+    }
+
+
+    .navigation h3 {
+        font-size: 14px;
+
+        margin-bottom: 10px;
+    }
+
+
+    #navigationButtons {
+        gap: 6px;
+    }
+
+
+    .nav-button {
+        min-height: 35px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =====================================================
+   IPHONE LAYAR SANGAT KECIL
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .title {
+        font-size: 14px;
+    }
+
+
+    .subtitle {
+        font-size: 9px;
+    }
+
+
+    .timer {
+        min-width: 95px;
+    }
+
+
+    .timer strong {
+        font-size: 13px;
+    }
+
+
+    .card {
+        padding: 14px;
+    }
+
+
+    .card h2 {
+        font-size: 15px;
+    }
+
+
+    .option {
+        font-size: 12px;
+    }
+
+
+    .actions button {
+        font-size: 9px;
+    }
+
+}
+/* ==========================================
+   HALAMAN HASIL
+   ========================================== */
+
+.result-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.result-card {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+
+.result-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+
+.result-card h1 {
+  margin: 0;
+  font-size: 26px;
+  color: #1e3a8a;
+}
+
+
+.result-subtitle {
+  color: #64748b;
+  margin-top: 8px;
+}
+
+
+.score-box {
+  margin: 25px auto;
+  padding: 20px;
+  background: #eff6ff;
+  border-radius: 15px;
+}
+
+
+.score-label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #64748b;
+}
+
+
+.score {
+  font-size: 60px;
+  font-weight: bold;
+  color: #2563eb;
+  line-height: 1.1;
+}
+
+
+.score-total {
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+
+.result-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 15px 8px;
+}
+
+
+.result-number {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+
+.result-label {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+
+.result-actions {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.retry-button,
+.review-button,
+.back-result-button {
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.retry-button {
+  background: #2563eb;
+  color: white;
+}
+
+
+.review-button {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+
+/* ==========================================
+   PEMBAHASAN
+   ========================================== */
+
+.review-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+  padding: 25px 15px;
+}
+
+
+.review-page h1 {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #1e3a8a;
+}
+
+
+.review-subtitle {
+  max-width: 700px;
+  margin: 8px auto 20px;
+  color: #64748b;
+}
+
+
+.review-card {
+  max-width: 700px;
+  margin: 15px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+
+.review-number {
+  color: #2563eb;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.review-card h3 {
+  line-height: 1.5;
+  color: #1e293b;
+}
+
+
+.review-answer {
+  margin-top: 15px;
+  padding: 12px;
+  background: #fef2f2;
+  border-radius: 8px;
+}
+
+
+.review-correct {
+  margin-top: 10px;
+  padding: 12px;
+  background: #f0fdf4;
+  border-radius: 8px;
+}
+
+
+.review-status {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+
+.back-result-button {
+  display: block;
+  max-width: 700px;
+  width: calc(100% - 30px);
+  margin: 20px auto;
+  background: #2563eb;
+  color: white;
+}
+.review-explanation {
+  margin-top: 12px;
+  padding: 14px;
+  background: #eff6ff;
+  border-radius: 8px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.review-explanation strong {
+  color: #1e3a8a;
+}
+
+.review-explanation p {
+  margin: 6px 0 0;
+}
+/* =================================
+   HALAMAN DEPAN
+================================= */
+
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef6ff, #ffffff);
+  color: #17365d;
+}
+
+
+/* HEADER */
+
+.home-header {
+  height: 70px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0876d1;
+  color: white;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffd54a;
+}
+
+.header-badge {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  font-size: 13px;
+}
+
+
+/* HERO */
+
+.hero {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-label {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #dff0ff;
+  color: #0876d1;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1.1;
+  color: #17365d;
+}
+
+.hero h1 span {
+  color: #0876d1;
+}
+
+.hero-description {
+  margin-top: 25px;
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #5d7085;
+}
+
+
+/* TOMBOL MULAI */
+
+.start-button {
+  margin-top: 25px;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 10px;
+  background: #0876d1;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(8,118,209,0.25);
+  transition: 0.2s;
+}
+
+.start-button span {
+  margin-left: 12px;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+}
+
+.trust-text {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #718096;
+}
+
+
+/* KARTU SIMULASI */
+
+.hero-card {
+  width: 320px;
+  padding: 25px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 15px 45px rgba(20,60,100,0.12);
+}
+
+.mini-card-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  color: #0876d1;
+}
+
+.live-dot {
+  color: #20b26b;
+}
+
+.mini-score {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+}
+
+.score-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 10px solid #dff0ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-circle strong {
+  font-size: 38px;
+  color: #0876d1;
+}
+
+.score-circle small {
+  color: #718096;
+}
+
+.mini-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.mini-info div {
+  padding: 12px 5px;
+  background: #f5f9fd;
+  border-radius: 10px;
+}
+
+.mini-info strong {
+  display: block;
+  color: #17365d;
+}
+
+.mini-info span {
+  font-size: 11px;
+  color: #718096;
+}
+
+
+/* FITUR */
+
+.features {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px 30px 70px;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 35px;
+  color: #17365d;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 28px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(20,60,100,0.08);
+}
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  margin: 0 0 10px;
+  color: #17365d;
+}
+
+.feature-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #718096;
+}
+
+
+/* FOOTER */
+
+.home-footer {
+  padding: 25px;
+  text-align: center;
+  color: #718096;
+  font-size: 13px;
+}
+
+
+/* =================================
+   HALAMAN CAT
+================================= */
+
+.cat-page {
+  display: none;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+  .home-header {
+    padding: 0 20px;
+  }
+
+  .header-badge {
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 50px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-card {
+    width: auto;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    padding: 20px 20px 50px;
+  }
+
+  .features h2 {
+    font-size: 25px;
+  }
+
+}
+/* =================================
+   PRICING
+================================= */
+
+.pricing {
+  padding: 70px 20px;
+  background: #f5f9fd;
+}
+
+.pricing-title {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+}
+
+.pricing-title h2 {
+  margin: 15px 0 10px;
+  font-size: 32px;
+  color: #17365d;
+}
+
+.pricing-title p {
+  color: #718096;
+  line-height: 1.6;
+}
+
+
+/* PRICE CARD */
+
+.price-card {
+  width: 100%;
+  max-width: 380px;
+  margin: 40px auto 0;
+  padding: 35px 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(20,60,100,0.12);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.price-badge {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #dff0ff;
+  color: #0876d1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.price-card h3 {
+  margin: 20px 0 5px;
+  font-size: 22px;
+  color: #17365d;
+}
+
+.price {
+  margin: 10px 0;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0876d1;
+}
+
+.price-description {
+  color: #718096;
+}
+
+.price-list {
+  margin: 25px 0;
+  text-align: left;
+}
+
+.price-list div {
+  padding: 9px 0;
+  color: #40566d;
+}
+
+
+/* BUY BUTTON */
+
+.buy-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #0876d1;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  transform: translateY(-1px);
+}
+
+.secure-text {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #718096;
+}
+
+
+/* =================================
+   FAQ
+================================= */
+
+.faq {
+  max-width: 800px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+.faq h2 {
+  margin-bottom: 35px;
+  text-align: center;
+  color: #17365d;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(20,60,100,0.06);
+}
+
+.faq-item h3 {
+  margin: 0 0 8px;
+  color: #17365d;
+  font-size: 16px;
+}
+
+.faq-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #718096;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .pricing-title h2 {
+    font-size: 26px;
+  }
+
+  .price {
+    font-size: 36px;
+  }
+
+}
+/* =================================
+   DASHBOARD
+================================= */
+
+.dashboard-page {
+  display: none;
+  min-height: 100vh;
+  background: #f5f9fd;
+}
+
+
+/* HEADER */
+
+.dashboard-header {
+  height: 70px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0876d1;
+  color: white;
+}
+
+.logout-button {
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* CONTAINER */
+
+.dashboard-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px 70px;
+}
+
+
+/* WELCOME */
+
+.welcome-box {
+  padding: 30px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(20,60,100,0.07);
+}
+
+.small-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0876d1;
+  letter-spacing: 1px;
+}
+
+.welcome-box h1 {
+  margin: 8px 0;
+  color: #17365d;
+  font-size: 30px;
+}
+
+.welcome-box p {
+  margin: 0;
+  color: #718096;
+}
+
+
+/* SECTION */
+
+.dashboard-section {
+  margin-top: 35px;
+}
+
+.dashboard-section h2 {
+  margin-bottom: 15px;
+  color: #17365d;
+  font-size: 21px;
+}
+
+
+/* TRYOUT CARD */
+
+.tryout-card {
+  padding: 28px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(20,60,100,0.07);
+}
+
+.tryout-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.tryout-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  background: #dff0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+}
+
+.tryout-top h3 {
+  margin: 0 0 5px;
+  color: #17365d;
+  font-size: 20px;
+}
+
+.tryout-top p {
+  margin: 0;
+  color: #718096;
+}
+
+
+/* DETAILS */
+
+.tryout-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.tryout-details div {
+  padding: 15px;
+  border-radius: 10px;
+  background: #f5f9fd;
+  text-align: center;
+}
+
+.tryout-details strong {
+  display: block;
+  font-size: 20px;
+  color: #0876d1;
+}
+
+.tryout-details span {
+  font-size: 12px;
+  color: #718096;
+}
+
+
+/* STATUS */
+
+.access-status {
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: #20a464;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #20a464;
+}
+
+
+/* BUTTON */
+
+.dashboard-start {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #0876d1;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* HISTORY */
+
+.history-empty {
+  padding: 40px 20px;
+  border-radius: 18px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(20,60,100,0.07);
+}
+
+.history-icon {
+  font-size: 40px;
+}
+
+.history-empty h3 {
+  margin: 12px 0 5px;
+  color: #17365d;
+}
+
+.history-empty p {
+  max-width: 400px;
+  margin: auto;
+  line-height: 1.6;
+  color: #718096;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .dashboard-header {
+    padding: 0 20px;
+  }
+
+  .dashboard-container {
+    padding: 25px 15px 50px;
+  }
+
+  .welcome-box {
+    padding: 25px 20px;
+  }
+
+  .welcome-box h1 {
+    font-size: 25px;
+  }
+
+  .tryout-card {
+    padding: 22px;
+  }
+
+  .tryout-details strong {
+    font-size: 18px;
+  }
+
+}
+/* =================================
+   LOGIN & REGISTER
+================================= */
+
+.login-page,
+.register-page {
+  display: none;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef6ff, #ffffff);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(20,60,100,0.12);
+  box-sizing: border-box;
+}
+
+
+.login-logo {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 800;
+  color: #0876d1;
+  letter-spacing: 1px;
+}
+
+.login-logo span {
+  color: #f0b900;
+}
+
+
+.login-card h1 {
+  margin: 0;
+  text-align: center;
+  color: #17365d;
+}
+
+
+.login-description {
+  margin: 10px 0 25px;
+  text-align: center;
+  color: #718096;
+  line-height: 1.5;
+}
+
+
+.login-card label {
+  display: block;
+  margin: 15px 0 7px;
+  color: #40566d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.login-card input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d7e2ec;
+  border-radius: 9px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+
+.login-card input:focus {
+  border-color: #0876d1;
+}
+
+
+.login-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #0876d1;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.login-divider {
+  margin: 20px 0;
+  text-align: center;
+  color: #9aa9b8;
+  font-size: 13px;
+}
+
+
+.register-button {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #0876d1;
+  border-radius: 9px;
+  background: white;
+  color: #0876d1;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.back-home-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  background: transparent;
+  color: #718096;
+  cursor: pointer;
+}
+
+
+@media (max-width: 500px) {
+
+  .login-card {
+    padding: 28px 20px;
+  }
+
+}
+/* =================================
+   STATUS AKSES
+================================= */
+
+.access-locked {
+  color: #d97706;
+}
+
+.access-locked .status-dot {
+  background: #d97706;
+}
+
+.dashboard-buy {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #0876d1;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dashboard-buy:hover {
+  transform: translateY(-1px);
+}
+/* =================================
+   PURCHASE PAGE
+================================= */
+
+.purchase-page {
+  display: none;
+  min-height: 100vh;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  background: #f5f9fd;
+}
+
+
+.purchase-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 35px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 15px 45px rgba(20,60,100,0.12);
+}
+
+
+.purchase-logo {
+  margin-bottom: 20px;
+  font-size: 23px;
+  font-weight: 800;
+  color: #0876d1;
+}
+
+.purchase-logo span {
+  color: #f0b900;
+}
+
+
+.purchase-badge {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #dff0ff;
+  color: #0876d1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.purchase-card h1 {
+  margin: 20px 0 10px;
+  color: #17365d;
+}
+
+
+.purchase-description {
+  color: #718096;
+  line-height: 1.6;
+}
+
+
+.purchase-price {
+  margin: 25px 0;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0876d1;
+}
+
+
+.purchase-features {
+  padding: 20px;
+  border-radius: 12px;
+  background: #f5f9fd;
+  text-align: left;
+}
+
+
+.purchase-features div {
+  padding: 8px 0;
+  color: #40566d;
+}
+
+
+.purchase-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #0876d1;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.purchase-back {
+  margin-top: 18px;
+  border: none;
+  background: transparent;
+  color: #718096;
+  cursor: pointer;
+}
+
+
+@media (max-width: 500px) {
+
+  .purchase-card {
+    padding: 28px 20px;
+  }
+
+  .purchase-price {
+    font-size: 34px;
+  }
+
+}
